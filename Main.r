@@ -1,7 +1,10 @@
+
+Modificar los cambios
+
 #*******************************************************************************************
 #*******************************************************************************************
-#********Script Principal para el análisis y calibración del banco de items 
-#******** Modulo de Análisis Psicometrico 
+#********Script Principal para el an?lisis y calibraci?n del banco de items 
+#******** Modulo de An?lisis Psicometrico 
 #*******************************************************************************************
 #*******************************************************************************************
 rm(list = ls())
@@ -36,7 +39,7 @@ library(tidyverse)
 
 #*******************************************************************************************
 #*******************************************************************************************
-#********** Se ejecuta el Script que permite definir los parámetros 
+#********** Se ejecuta el Script que permite definir los par?metros 
 #*******************************************************************************************
 #*******************************************************************************************
 
@@ -83,7 +86,7 @@ ejecutascripts=function(path,ident,coneccion=con){
 }
 
 
-# Función mensaje de lo ejecutado
+# Funci?n mensaje de lo ejecutado
 
 agregoproc<-function(mensaje){
 	sink(conr,append=TRUE)
@@ -102,7 +105,7 @@ agregoproc<-function(mensaje){
 #********************************************************************************************
 #********************************************************************************************
 #***** Se crea la estructura de directorios si es necesario hacerlo
-#***** Se debe crear antes de ejcutar ningun análisis
+#***** Se debe crear antes de ejcutar ningun an?lisis
 #********************************************************************************************
 #********************************************************************************************
 
@@ -142,7 +145,7 @@ if(bajabases==TRUE) {
 
 #********************************************************************************************
 #********************************************************************************************
-##### Se cargan los paths para efectuar los análisis
+##### Se cargan los paths para efectuar los an?lisis
 #********************************************************************************************
 #********************************************************************************************
 
@@ -174,17 +177,17 @@ setwd(rutaAnalisisPrueba)
 
 #********************************************************************************************
 #********************************************************************************************
-#*******Se generan las bases genéricas para el análisis si es necesario.
+#*******Se generan las bases gen?ricas para el an?lisis si es necesario.
 #********************************************************************************************
 #********************************************************************************************
 
 if(creabases==TRUE){
 	source(paste(rutaBASES,'1_ArmaBasesGen.R',sep = '/'))
-	print('Se crearon las bases genéricas')
-	agregoproc("Se crearon las bases genéricas")
+	print('Se crearon las bases gen?ricas')
+	agregoproc("Se crearon las bases gen?ricas")
 }else{
 	print('ARMAR BASES GENERICAS NO SOLICITADO')
-	agregoproc("No se solicitó crear las bases genéricas del análisis")
+	agregoproc("No se solicit? crear las bases gen?ricas del an?lisis")
 }
 
 
@@ -196,7 +199,7 @@ if(creabases==TRUE){
 #
 #********************************************************************************************
 
-#***** Primero se controla existan las bases necesarias para este análisis
+#***** Primero se controla existan las bases necesarias para este an?lisis
 #***** Luego se ejcutan los scripts 
 #********************************************************************************************
 
